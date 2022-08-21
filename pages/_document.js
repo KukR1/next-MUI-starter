@@ -7,6 +7,7 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
+        <title>Diti Paintings</title>
         <Head>
           <link
             rel="stylesheet"
