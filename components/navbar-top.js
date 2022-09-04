@@ -2,19 +2,15 @@ import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import CallIcon from '@mui/icons-material/Call';
+import logo from '../public/logo.png';
+import Image from 'next/image';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Navbar = () => {
+  
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -27,78 +23,46 @@ const Navbar = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+      <Container sx={{padding: { xs: '0', md: '10px'}}} maxWidth="xl">
+        <Toolbar sx={{ minHeight:{xs: '15vh'},flexDirection: { xs: 'none', md: 'row'}, gap: {xs:'0', md:'1rem'}}}  disableGutters>
+        <Typography
+            sx={{
+              fontSize: '1rem',
+              display: { xs: 'flex', md: 'none' },
+              flex: { xs: 1},
+              letterSpacing: '2px',
+              justifyContent: 'center',
+              textAlign: {xs: 'center'},
+              lineHeight: '1.4rem',
+              fontFamily: "Bebas Neue",
+              fontWeight: 700,
+              color: '#f26527',
+              textDecoration: 'none',
+            }}
+          >
+             Professional Painting<br/> & Decorating
+          </Typography>
+      <Image style={{textAlign: {xs: 'center'}}}src={logo} width={100} height={100} layout='intrinsic' />
+      <Box sx={{display: 'flex', justifyContent: 'center', gap: '1rem', flex: { xs: 1}, textAlign: {xs: 'right'}}}>
+      <EmailIcon sx={{display: { xs: 'flex', md: 'none' },}} fontSize="large" color='primary' />
+      <CallIcon sx={{display: { xs: 'flex', md: 'none' },}} fontSize="large" color='success' />
+      </Box>
           <Typography
             variant="h6"
             noWrap
             component="a"
             href="/"
             sx={{
-              mr: 2,
               fontSize: '1rem',
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
-              color: 'inherit',
+              color: '#fbefcc',
               textDecoration: 'none',
             }}
           >
-            DITI <br /> Professional Painting & Decorating
+             Professional Painting<br/> & Decorating
           </Typography>
-
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            ></Menu>
-          </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Diti
-          </Typography>
-
           <Box
             sx={{
               alignItems: 'center',

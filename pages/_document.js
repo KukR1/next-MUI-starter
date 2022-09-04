@@ -9,10 +9,10 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <title>Diti Paintings</title>
         <Head>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-          />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/>
+          
         </Head>
         <body>
           <Main />
