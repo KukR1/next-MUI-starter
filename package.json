@@ -1,5 +1,6 @@
 {
   "private": true,
+  "name": "DT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
