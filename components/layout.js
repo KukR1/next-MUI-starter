@@ -1,13 +1,17 @@
 import Navbar from './navbar-top';
-import Footer from './footer';
-import About from '../pages/about';
+import Content from '../pages/content';
+import { Box } from '@mui/material';
+import Head from 'next/head';
+import dynamic from 'next/dynamic';
 
 export default function Layout({ children }) {
   return (
-    <>
+    <Box>
       <Navbar />
-      <About />
-      <Footer />
-    </>
+      <Box>
+        <Content />
+        {children}
+      </Box>
+    </Box>
   );
 }

@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CacheProvider } from '@emotion/react';
 import { ThemeProvider, CssBaseline } from '@mui/material';
-
 import createEmotionCache from '../utility/createEmotionCache';
 import theme from '../styles/theme/theme';
-import '../styles/globals.css';
 import Layout from '../components/layout';
+import NonSSRWrapper from '../components/ssr';
+import '../styles/globals.css';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -18,7 +18,9 @@ const MyApp = (props) => {
       <ThemeProvider theme={theme}>
         <Layout>
           <CssBaseline />
-          <Component {...pageProps} />
+          <NonSSRWrapper>
+            <Component {...pageProps} />
+          </NonSSRWrapper>
         </Layout>
       </ThemeProvider>
     </CacheProvider>
