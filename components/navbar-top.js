@@ -15,7 +15,7 @@ const Navbar = () => {
       <AppBar
         sx={{
           background: {
-            xs: `linear-gradient(to right, white 50%, #008ebc)`,
+            xs: `#FFFF`,
             md: `linear-gradient(to right, white 50%, #008ebc)`,
           },
         }}
@@ -93,10 +93,10 @@ const Navbar = () => {
               </Typography>
               <CallIcon
                 fontSize="large"
-                color="inherit"
                 sx={{
                   display: { xs: 'flex', md: 'flex', lg: 'none' },
                   cursor: 'pointer',
+                  color: '#3FC748',
                 }}
               />
             </Box>

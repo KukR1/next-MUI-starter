@@ -53,7 +53,7 @@ export default function Home() {
           justifyContent: 'center',
           alignItems: 'center',
           backgroundColor: (theme) => theme.palette.primary.main,
-          borderRadius: '0 0 0.5rem 0.5rem',
+          borderRadius: '0.5rem',
         }}
       >
         <Typography

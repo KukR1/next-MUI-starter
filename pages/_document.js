@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <title>Diti Painting & Decorating</title>
         <Head>
-          <meta name="theme-color" content="#008ebc" />
+          <meta name="theme-color" content="#FFF" />
           <link
             rel="stylesheet"
             type="text/css"
