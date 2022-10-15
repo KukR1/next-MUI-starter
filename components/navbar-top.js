@@ -6,7 +6,7 @@ import { Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import CallIcon from '@mui/icons-material/Call';
-import logo from '../public/logo.svg';
+import logo from '../public/logo2.png';
 import Image from 'next/image';
 
 const Navbar = () => {
