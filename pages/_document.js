@@ -7,7 +7,6 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <title>Diti Painting & Decorating</title>
         <Head>
           <meta name="theme-color" content="#FFF" />
           <link
